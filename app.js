@@ -146,3 +146,19 @@ const checkRow = () => {
         }
     }
 }
+
+const showMessage = (message) => {
+    const messageText = document.createElement('p');
+
+    messageText.textContent = message;
+
+    messageContainer.append(messageText);
+
+    setTimeout(() => messageContainer.removeChild(messageText), 5000);
+}
+
+const colorToKey = (letter, color) => {
+    const key = document.getElementById(letter);
+
+    key.classList.add(color);
+}
