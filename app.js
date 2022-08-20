@@ -162,3 +162,37 @@ const colorToKey = (letter, color) => {
 
     key.classList.add(color);
 }
+
+const flipTile = () => {
+    const rowTiles = document.querySelector('#row-' + currentRow).childNodes;
+
+    let checkWordle = wordle;
+
+    const guess = [];
+
+    rowTiles.forEach(tile => {
+        guess.push({ letter: tile.getAttribute('data'), color: 'grey-overlay' });
+    });
+
+    guess.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green-overlay';
+            checkWordle = checkWordle.replace(guess.letter, '');
+        }
+    });
+
+    guess.forEach(guess => {
+        if (checkWordle.includes(guess.letter)) {
+            guess.color = 'yellow-overlay';
+            checkWordle = checkWordle.replace(guess.letter, '');
+        }
+    });
+
+    rowTiles.forEach((tile, index) => {
+        setTimeout(() => {
+            tile.classList.add('flip');
+            tile.classList.add(guess[index].color);
+            colorToKey(guess[index].letter, guess[index].color);
+        }, 500 * index)
+    })
+}
