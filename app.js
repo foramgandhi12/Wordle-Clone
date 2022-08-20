@@ -119,3 +119,30 @@ const deleteLetter = () => {
         tile.setAttribute('data', '');
     }
 }
+
+const checkRow = () => {
+    const guess = guessArrays[currentRow].join('');
+
+    if (currentTile > 4) {
+        flipTile();
+        if (wordle == guess) {
+            if (currentRow == 0) {
+                showMessage('Congratulations! You have guessed the word correctly in ' + (currentRow + 1) + ' try!');
+            } else {
+                showMessage('Congratulations! You have guessed the word correctly in ' + (currentRow + 1) + ' tries!');
+            }
+            isGameOver = true;
+            return;
+        } else {
+            if (currentRow >= 5) {
+                isGameOver = true;
+                showMessage('Sorry! You were not able to guess the word! The word was ' + wordle);
+            }
+
+            if (currentRow < 5) {
+                currentRow++;
+                currentTile = 0;
+            }
+        }
+    }
+}
