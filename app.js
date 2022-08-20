@@ -105,3 +105,17 @@ const addLetter = (letter) => {
 
     currentTile++;
 }
+
+const deleteLetter = () => {
+    if (currentTile > 0) {
+        currentTile--;
+
+        const tile = document.getElementById('row-' + currentRow + '-tile-' + currentTile);
+
+        tile.textContent = '';
+
+        guessArrays[currentRow][currentTile] = '';
+
+        tile.setAttribute('data', '');
+    }
+}
