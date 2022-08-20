@@ -1,0 +1,22 @@
+{
+  "name": "Wordle-Clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foramgandhi12/Wordle-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foramgandhi12/Wordle-Clone/issues"
+  },
+  "homepage": "https://github.com/foramgandhi12/Wordle-Clone#readme"
+}
