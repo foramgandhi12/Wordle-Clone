@@ -93,3 +93,15 @@ const handleClick = (letter) => {
         addLetter(letter);
     }
 }
+
+const addLetter = (letter) => {
+    const tile = document.getElementById('row-' + currentRow + '-tile-' + currentTile);
+
+    tile.textContent = letter;
+
+    guessArrays[currentRow][currentTile] = letter;
+
+    tile.setAttribute('data', letter);
+
+    currentTile++;
+}
