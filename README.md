@@ -1,7 +1,6 @@
 # Wordle Clone
 
-This is a clone created of the popular word game called Wordle. It uses Express, React and Node.js.
-<br><br>
+This is a clone of the popular word guessing game called Wordle. It is made using Express, React and Node.js.
 
 ## How to Run
 
