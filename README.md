@@ -20,5 +20,5 @@ $> npm start
 ```
 
 Open http://localhost:8000 in your browser.
-
+<br>
 <img src="wordle.PNG" width="300" height="350">
