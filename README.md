@@ -8,9 +8,11 @@ Clone the repository and navigate to the following link to obtain an API key:
 
 https://rapidapi.com/sheharyar566/api/random-words5
 
+<br>
+
 Open the `index.js` file and replace `{API_KEY}` with your key.
 
-Run the following commands in your terminal to install he dependencies and start the server:
+Run the following commands in your terminal to install the dependencies and start the server:
 
 ```
 $> npm install
